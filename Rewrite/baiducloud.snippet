@@ -1,0 +1,44 @@
+[rewrite_local]
+
+# > 百度网盘_开屏广告
+^https?:\/\/pan\.baidu\.com\/api\/getsyscfg url script-response-body https://raw.githubusercontent.com/git-starsh/QuantumultX/main/Rewrite-Js/baiducloud.js
+# > 百度网盘_广告推广
+^https?:\/\/afd\.baidu\.com\/afd\/entry url script-response-body https://raw.githubusercontent.com/git-starsh/QuantumultX/main/Rewrite-Js/baiducloud.js
+# > 百度网盘_启动弹窗
+^https?:\/\/.*baidu\.com\/rest\/.*\/membership\/proxy\/guide url reject-200
+# > 百度网盘_设置信息流
+^https?:\/\/pan\.baidu\.com\/act\/v\d\/(bchannel|welfare)\/list url reject-200
+# > 百度网盘_通用广告
+^https?:\/\/pan\.baidu\.com\/rest\/.*\/pcs\/ad url reject-200
+# > 百度网盘_活动推广
+^https?:\/\/pan\.baidu\.com\/act\/api\/activityentry url reject-200
+# > 百度网盘_游戏广告
+^https:\/\/pan\.baidu\.com\/rest\/.*\/membership\/user\?method=gamecenter url script-response-body https://raw.githubusercontent.com/git-starsh/QuantumultX/main/Rewrite-Js/baiducloud.js
+# > 百度网盘_热搜list
+^https:\/\/pan\.baidu\.com\/feed\/hotlist url reject-200
+# > 百度网盘_活动推广
+^https?:\/\/.*zhangyuyidong\.cn\/api\/zysdk url reject-200
+# > 百度网盘_搜索填词
+^https:\/\/pan\.baidu\.com\/queryintent\/queryhint url reject-200
+# > 百度网盘_金币乐园
+^https:\/\/pan\.baidu\.com\/coins\/center\/notice url reject-200
+# > 百度网盘_首页信息流
+^https:\/\/pan\.baidu\.com\/feed\/cardinfos url script-response-body https://raw.githubusercontent.com/git-starsh/QuantumultX/main/Rewrite-Js/baiducloud.js
+
+[mitm]
+
+hostname = pan.baidu.com, afd.baidu.com
+
+
+
+
+
+
+
+
+
+
+
+
+
+
